@@ -1,87 +1,77 @@
-# LLM Wiki × HTML 教學簡報
+# 用 LLM Wiki 製作教學 HTML 簡報
 
-**作業主題：Minecraft 3D 體素建模入門——以沙漠狐獴為例**
+主題：Minecraft 3D 體素建模工藝——從設計草圖到生動實體（以沙漠狐獴為例）
 
-本專案利用 LLM Wiki 整理 Minecraft 的模型設計知識，再將知識轉換為可實際操作的 HTML 教學簡報。希望讓沒有接觸過 Blockbench 的人，也能從一隻「沙漠哨兵・狐獴」的建模過程，理解比例設計、骨骼、UV 貼圖及動畫的基本概念。
+## 1. LLM Wiki 主題與簡短介紹
 
-## 一、作業成果
+本次以 Minecraft 的 Blockbench 體素建模為主題，建立一份讓初學者也能閱讀的 LLM Wiki，並以「沙漠哨兵・狐獴」作為貫穿案例。內容涵蓋模型比例、骨骼階層、Pivot 旋轉中心、像素貼圖與動畫原理，最後再把 Wiki 知識轉換成 HTML 教學簡報。
 
-| 項目 | 成果 |
-| --- | --- |
-| **LLM Wiki** | [Wiki 首頁與知識索引](./wiki/index.md) |
-| **教學 HTML 簡報** | [簡報入口 index.html](./index.html)（可由 GitHub Pages 部署瀏覽） |
-| **資料來源** | [5 篇來源與引用對照](./wiki/index.md#收錄的來源ingest)、[來源筆記](./sources/) |
-| **實際執行紀錄** | [Wiki 更新紀錄](./wiki/log.md)、[自動檢查紀錄](./logs/) |
-| **檢查工具** | [check_project.py](./tools/check_project.py) |
+建立 Wiki 時採用「先討論、後生成」的方式，先規劃應教哪些內容，再蒐集、整理與檢查資料。本次共整理 5 份來源：Minecraft Wiki 模型教學、Blockbench 官方文件、Microsoft Learn 動畫文件、動畫十二原則，以及 Pixel Art 相關資料。來源網址、日期與引用對應均保留在專案中。
 
-> 線上簡報如已啟用 GitHub Pages，可使用 https://niwi7yming4.github.io/llm-wiki-homework/ 瀏覽；若尚未啟用，請先至 Repository 的 Settings → Pages 部署。
+Wiki 分成五個章節：
+（1）空間尺度與模型比例：理解 Minecraft 的單位與狐獴體型。
+（2）骨骼階層與 Pivot：說明骨骼父子關係及旋轉中心。
+（3）像素貼圖與色彩：介紹像素簇、色階和避免無意義雜訊的方法。
+（4）動畫與自然律動：介紹預備動作、緩入緩出、尾巴與身體的動態。
+（5）建模訓練與角色變體：整理製作順序與後續延伸方法。
 
-## 二、LLM Wiki：資料如何建立？
+## 2. LLM Wiki 連結或成果
 
-這次採用「先討論、後生成」的方式：先確定初學者需要理解哪些知識，再蒐集與整理資料，最後建立五個 Wiki 章節，而不是直接請 AI 一次產生整份教材。
+Wiki 索引（含五篇知識頁面及五份資料來源）：
+https://github.com/Niwi7yming4/llm-wiki-homework/blob/main/wiki/index.md
 
-**共整理 5 份來源（ingest）：** Minecraft Wiki 的模型教學、Blockbench 官方文件、Microsoft Learn 動畫說明、動畫十二原則及 Pixel Art 相關介紹。每份來源的網址、日期及採用範圍都記錄於 [Wiki 索引](./wiki/index.md)。
+五份來源筆記：
+https://github.com/Niwi7yming4/llm-wiki-homework/tree/main/sources
 
-| Wiki 章節 | 主要教學內容 |
-| --- | --- |
-| [01 空間尺度與體素解剖](./wiki/01_scale_and_voxel_anatomy.md) | Minecraft 尺度、模型比例、狐獴的體態 |
-| [02 骨骼階層與 Pivot](./wiki/02_bone_hierarchy_and_pivots.md) | 骨骼父子關係、旋轉中心、避免關節斷裂 |
-| [03 像素貼圖與色彩](./wiki/03_anti_dirty_texture_and_hue_shift.md) | 像素簇、限制色階、避免無意義雜訊 |
-| [04 動畫與自然律動](./wiki/04_animation_physics_and_organic_timing.md) | 預備動作、緩入緩出、身體與尾巴的動態 |
-| [05 建模訓練與變體](./wiki/05_academy_training_methodology.md) | 建模流程、技能練習、角色變體設計 |
+Wiki 建立與修改紀錄：
+https://github.com/Niwi7yming4/llm-wiki-homework/blob/main/wiki/log.md
 
-Wiki 是簡報內容的依據；沙漠狐獴則是貫穿各章節的實作案例。外部資料與自行設定的模型參數也盡量分開標明，減少 AI 將設計選擇誤寫成通用規則的問題。
+## 3. 教學 HTML 簡報連結
 
-## 三、教學 HTML 簡報
+GitHub 專案（含 HTML 簡報與素材）：
+https://github.com/Niwi7yming4/llm-wiki-homework
 
-將 Wiki 的內容轉換為 **10 頁互動式教學簡報**，從建模的基本觀念逐步帶到骨骼、貼圖與動畫，最後整理學習重點。
+HTML 原始檔：
+https://github.com/Niwi7yming4/llm-wiki-homework/blob/main/index.html
 
-簡報採用 Minecraft 風格的操作介面，包含快捷列選頁、鍵盤翻頁、圖文示例與模型 GIF 動畫。比起大量堆疊技術名詞，這份教材希望讓讀者能夠「看到例子，再理解為什麼要這樣建模」。
+GitHub Pages 網址（需先確認已啟用部署）：
+https://niwi7yming4.github.io/llm-wiki-homework/
 
-## 四、Loop / Graph 設計
+簡報共設計 10 頁，將 Wiki 中的比例、骨骼、貼圖及動畫概念改寫成循序漸進的教學。介面採 Minecraft 風格，加入快捷列選頁、翻頁操作、模型示例與 GIF 動畫，讓初學者不只是看文字，也能透過實際畫面理解建模觀念。
 
-本次將流程分成「**知識內容檢查**」與「**HTML 教學成果檢查**」兩個循環：
+## 4. Loop / Graph 流程設計
 
-```mermaid
-flowchart TD
-    A[討論主題與學習目標] --> B[蒐集並 ingest 5 份資料]
-    B --> C[整理 Wiki 與來源引用]
-    C --> D[擷取知識點及教學大綱]
-    D --> E{知識是否正確、符合 Wiki？}
-    E -- 否 --> C
-    E -- 是 --> F[生成 HTML 教學簡報]
-    F --> G{排版、資源、操作是否正常？}
-    G -- 否 --> F
-    G -- 是 --> H[發布成果與保留紀錄]
-```
+整體流程：
+討論教學主題 → 蒐集並匯入五份資料 → 整理 Wiki 與來源引用 → 擷取知識重點、安排簡報大綱 → 檢查內容 → 產生 HTML 簡報 → 檢查介面與功能 → 完成成果。
 
-- **Loop 1：內容檢查。** 檢查專有名詞、模型尺度及貼圖觀念是否與 Wiki 相符，並確認重要內容能找到來源。若內容有誤，回到 Wiki 或大綱階段修正。
-- **Loop 2：簡報檢查。** 檢查 HTML 的頁數、連結、圖片、動圖及文字可讀性。若版面太擠或資源顯示不正常，只修改簡報，不必重做整個知識庫。
+這次採用兩個檢查循環：
 
-**這樣設計的原因**是把知識問題與前端呈現問題分開處理。先確定教材內容正確，再寫 HTML，可以避免完成介面後才因為概念錯誤而大幅返工。
+Loop 1（知識檢查）：確認大綱、專有名詞、比例設定與貼圖觀念是否符合 Wiki，有疑問就返回資料整理與內容編寫的步驟，重新比對來源，不直接進入 HTML 製作。
 
-## 五、實際執行與檢查紀錄
+Loop 2（網頁檢查）：完成 HTML 後，確認頁數、圖片、動圖、連結、字體與翻頁操作是否正常。若有內容擠在同一頁或圖片顯示異常，就回到簡報修改，不必重建整個 Wiki。
 
-專案使用 [Python 檢查程式](./tools/check_project.py) 檢查來源數量、Wiki 引用、HTML 頁數、內部連結、動圖透明度及部分文字樣式。以下為 2026/11/23 保留的兩次紀錄：
+這樣設計是為了把「內容有沒有教對」與「網頁能不能正常使用」分開檢查，減少發現一個問題就要重新生成整份簡報的情況。
 
-| 檢查時間 | PASS | WARN | FAIL | 主要情況 |
-| --- | ---: | ---: | ---: | --- |
-| [第一次](./logs/check_20261123_235702.txt) | 21 | 2 | 10 | Wiki 缺索引、缺來源引用，部分數學標記未正確處理 |
-| [修正後](./logs/check_20261123_235826.txt) | 29 | 2 | 2 | 已補齊 Wiki 索引與引用，仍有語法及 README 連結檢查項目未通過 |
+## 5. 一次實際執行結果與檢查紀錄
 
-這是當時的實際檢查快照，**不是全部測試都通過**。另外，簡報製作過程中也調整過動畫展示的頁面分配、字體大小及 GIF 背景，避免畫面資訊太密集或模型看不清楚。
+本次使用 Python 腳本檢查來源數量、Wiki 頁面引用、HTML 頁數、連結、GIF 透明度及字體等項目，並保存修正前後的紀錄。
 
-## 六、反思與 Workflow 調整
+第一次檢查（2026/11/23 23:57）：21 PASS、2 WARN、10 FAIL。主要問題是 Wiki 缺少索引與更新紀錄、五篇知識頁面缺少來源引用，以及部分數學標記格式不適合直接顯示。
 
-**哪個節點最容易出錯？**  
-主要集中在「資料整理成 Wiki」及「Wiki 轉換成簡報內容」的交界。第一次檢查時，Wiki 雖然已有五篇內容，卻缺乏清楚的來源引用；若直接拿去生成教材，容易把 AI 的敘述當成已查證的知識。
+第二次檢查（2026/11/23 23:58）：29 PASS、2 WARN、2 FAIL。補齊 Wiki 索引、更新紀錄和來源引用後，通過項目增加；但當時仍有語法及 README 連結檢查項目未通過，並非全部零錯誤。
 
-**把檢查提前到哪裡？**  
-原先偏向完成 HTML 後再檢查，後來改成在 **Wiki 整理完成、產生 HTML 前**，先確認來源引用、專有名詞及教學大綱；前端完成後再檢查排版與操作。
+另外，在簡報呈現方面，也發現過動畫展示過於集中、部分文字太小，以及 GIF 背景不適合面板的問題，因此重新分配頁面內容、調整文字與動圖顯示方式。
 
-**有修改 Graph 嗎？為什麼？**  
-有。將原本「資料 → 簡報 → 檢查」的線性流程改成雙迴圈：**內容出錯就退回 Wiki，介面出錯就退回 HTML**。這樣能更容易定位問題，也不需要每次都重新生成整份成果。
+實際檢查紀錄：
+https://github.com/Niwi7yming4/llm-wiki-homework/tree/main/logs
 
----
+檢查程式：
+https://github.com/Niwi7yming4/llm-wiki-homework/blob/main/tools/check_project.py
 
-本 Repository 保留 Wiki 內容、來源筆記、教學簡報、檢查紀錄與必要工程文件；README 則以本次作業的繳交項目為主。
+## 6. 反思與流程調整
+
+最容易出錯的節點是「Wiki 整理與教學內容生成」之間。第一次檢查時，雖然已經有五篇 Wiki 內容，但有些知識點沒有明確標示引用來源，容易讓 AI 把自行設定的模型數值或一般 3D 建模觀念當成通用規則。
+
+原本傾向在 HTML 完成後才檢查，後來把檢查提前到「Wiki 完成、產生簡報大綱」的階段，先確認來源引用與專業概念，再交給 AI 生成網頁。
+
+因此也調整了 Workflow：原本是一條「讀資料 → 生成簡報 → 檢查」的直線流程，改為雙迴圈。內容出錯就返回 Wiki 和大綱，介面出錯才返回 HTML 修改。這樣比較能找到問題發生的位置，也讓整個製作流程更有效率。
