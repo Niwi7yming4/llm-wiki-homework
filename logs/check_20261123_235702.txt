@@ -1,0 +1,38 @@
+檢查時間: 2026-11-23 23:57:02
+專案資料夾: anti_academy_bbmodel_slides
+
+[PASS] sources.count — 5 份來源筆記（需要 >= 5）
+[PASS] sources.url sources/S1_minecraft_wiki_tutorial_models.md — 有網址
+[PASS] sources.date sources/S1_minecraft_wiki_tutorial_models.md — 有抓取日期
+[PASS] sources.url sources/S2_blockbench_wiki.md — 有網址
+[PASS] sources.date sources/S2_blockbench_wiki.md — 有抓取日期
+[PASS] sources.url sources/S3_ms_learn_bedrock_animation_overview.md — 有網址
+[PASS] sources.date sources/S3_ms_learn_bedrock_animation_overview.md — 有抓取日期
+[PASS] sources.url sources/S4_wikipedia_twelve_principles_of_animation.md — 有網址
+[PASS] sources.date sources/S4_wikipedia_twelve_principles_of_animation.md — 有抓取日期
+[PASS] sources.url sources/S5_wikipedia_pixel_art.md — 有網址
+[PASS] sources.date sources/S5_wikipedia_pixel_art.md — 有抓取日期
+[PASS] wiki.pages — 5 篇 wiki 頁
+[FAIL] wiki.index.md — 缺少
+[FAIL] wiki.log.md — 缺少
+[FAIL] wiki.cite wiki/01_scale_and_voxel_anatomy.md — 沒有任何 [S#] 來源引用
+[FAIL] wiki.cite wiki/02_bone_hierarchy_and_pivots.md — 沒有任何 [S#] 來源引用
+[FAIL] wiki.cite wiki/03_anti_dirty_texture_and_hue_shift.md — 沒有任何 [S#] 來源引用
+[FAIL] wiki.cite wiki/04_animation_physics_and_organic_timing.md — 沒有任何 [S#] 來源引用
+[FAIL] wiki.cite wiki/05_academy_training_methodology.md — 沒有任何 [S#] 來源引用
+[FAIL] latex — 25 行仍含 LaTeX 或 $ 符號：wiki/01_scale_and_voxel_anatomy.md:12, wiki/01_scale_and_voxel_anatomy.md:13, wiki/01_scale_and_voxel_anatomy.md:14, wiki/01_scale_and_voxel_anatomy.md:23, wiki/01_scale_and_voxel_anatomy.md:24, wiki/01_scale_and_voxel_anatomy.md:27, wiki/01_scale_and_voxel_anatomy.md:28, wiki/01_scale_and_voxel_anatomy.md:33, wiki/01_scale_and_voxel_anatomy.md:45, wiki/01_scale_and_voxel_anatomy.md:46 …
+[FAIL] leak — 可能外洩內部路徑或檔名：AGENT.md 命中 SKILL\.md
+[PASS] html.slides — 10 頁投影片（需要 10）
+[PASS] html.hotbar — 熱鍵 1–10 對應 10 頁
+[PASS] links — index.html、README 與 md 內的本地連結都存在
+[PASS] gif.transparent ./assets/creature_meerkat.gif — 有透明旗標
+[PASS] gif.transparent ./assets/creature_meerkat_colony.gif — 有透明旗標
+[PASS] gif.transparent ./assets/creature_meerkat_meerkat_dig_burrow.gif — 有透明旗標
+[PASS] gif.transparent ./assets/creature_meerkat_meerkat_scorpion_pounce.gif — 有透明旗標
+[PASS] gif.transparent ./assets/creature_meerkat_meerkat_sentry_lookout.gif — 有透明旗標
+[PASS] gif.transparent ./assets/creature_meerkat_meerkat_sunbathe_chill.gif — 有透明旗標
+[WARN] css.font — 24 處字級小於 0.95rem：.mc-text-dim 0.85rem；.counter-slot 0.9rem；.step-badge 0.85rem；.mc-chip 0.82rem；.instructor-role 0.85rem；.keyboard-hints 0.88rem；kbd 0.82rem；.frame-top-bar 0.85rem；.media-caption 0.9rem；.spec-list li::before 0.85rem；.note-text 0.92rem；.matrix-legend 0.9rem；.palette-target 0.85rem；.swatch .step 0.78rem；.swatch .hex 0.7rem；.palette-footer 0.85rem；.action-tag 0.82rem；.rig-header 0.92rem；.rig-node 0.9rem；.rig-status-pill 0.88rem；.v-chip 0.92rem；.check-item p 0.88rem；.concl-quote 0.92rem；.ascii-graph 0.85rem
+[WARN] assets.unused — 20 個素材沒有被引用：assets/creature_meerkat_meerkat_scurry_walk.gif、assets/creature_meerkat_transparent.gif、assets/mc_textures/block_brown_terracotta.png、assets/mc_textures/block_coarse_dirt.png、assets/mc_textures/block_command_block_front.png、assets/mc_textures/block_crafting_table_front.png、assets/mc_textures/block_crafting_table_side.png、assets/mc_textures/block_dark_oak_planks.png、assets/mc_textures/block_diamond_block.png、assets/mc_textures/block_dirt.png、assets/mc_textures/block_emerald_block.png、assets/mc_textures/block_gold_block.png、assets/mc_textures/block_iron_block.png、assets/mc_textures/block_oak_planks.png、assets/mc_textures/block_orange_terracotta.png、assets/mc_textures/block_sandstone_top.png、assets/mc_textures/block_yellow_terracotta.png、assets/mc_textures/item_book.png、assets/mc_textures/item_diamond.png、assets/mc_textures/item_emerald.png
+[FAIL] readme.links — README 缺少：['wiki/index.md', 'logs/', 'tools/check_project.py']
+
+合計: PASS 21 / WARN 2 / FAIL 10
